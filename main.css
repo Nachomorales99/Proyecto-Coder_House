@@ -1,0 +1,342 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ESTILADO NAVBAR */
+
+.nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: white;
+}
+
+#trans {
+    font-size: 18px;
+    color: white;
+}
+
+
+a {
+    color: #9e9e9e;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.logo1 img {
+    width: 65px;
+    height: 65px;
+}
+
+/* FIN ESTILADO NAVBAR */
+
+/* CARRUSEL  */
+
+.carru {
+    margin-top: 50px;
+}
+
+/* FIN CARRUSEL */
+
+/*ENCABEZADO*/
+
+#header h2 {
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 1px 1px 2px black;
+}
+
+/*FIN ENCABEZADO*/
+
+/*REMERAS*/
+
+.card {
+    margin: auto;
+    margin-top: 1rem;
+    width: 300px;
+    height: 550px;
+}
+
+.img-container {
+    position: relative;
+    width: 300px;
+    height: 500px;
+}
+
+/*FIN REMERAS*/
+
+/* ESTILADO REMERAS SALE */
+
+#precio1 {
+    font-size: 1em;
+    text-decoration: line-through;
+}
+
+#precio2 {
+    font-size: 1.2em;
+}
+
+/* FIN ESTILADO REMERAS SALE*/
+
+/* ESTILADO TABLA */
+
+/* GRID + FLEXBOX*/
+
+.container-table {
+    width: 90%;
+    background: whitesmoke;
+    margin: 50px auto;
+
+    box-shadow: 0 0 20px #333;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 50px;
+}
+
+.table__title {
+    grid-column-start: 1;
+    grid-column-end: 4;
+
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.9em;
+}
+
+.table__header,
+.table__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.table__header {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.table__item {
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+/*FIN GRID + FLEXBOX*/
+
+/* FIN ESTILADO TABLA */
+
+/* ESTILADO FORMULARIO */
+
+#form{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: #0e141a;
+    color: white; 
+}  
+
+#form .form-select option{
+    background-color:#050e18;
+    color: white;
+}
+
+.btn{
+
+    margin: 1rem;
+}
+
+/* FIN ESTILADO FORMULARIO */
+
+/* NOSOTROS */
+
+#nosotros {
+    margin: 70px;
+}
+
+/* FIN NOSOTROS */
+
+/* EQUIPO */
+
+#equipo { 
+    margin: 70px;
+}
+
+.team {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.team img {
+    width: 350px;
+    height: 500px;
+}
+
+#use{
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 1px 1px 2px black;
+
+}
+
+/* FIN EQUIPO */
+
+
+/* ESTILADO FOOTER */
+
+footer {
+    width: 100%;
+    padding: 1rem 0px;
+    background-size: cover;
+    text-align: center;
+}
+
+.footer-title {
+    padding-top: 1rem;
+    color: #fafbfc;
+    display: flex;
+    justify-content: center;
+    padding-left: 1rem;
+}
+
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-left: 1.5rem;
+    gap: 1em;
+    font-size: 1.5rem;
+    color: white;
+}
+
+footer ul li a {
+    list-style-type: none;
+    color: white;
+    font-size: 1.2rem;
+
+}
+
+.footer-logo {
+    display: flex;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display: flex;
+    width: 150px;
+    height: 150px;
+    justify-content: center;
+}
+
+#pie {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.redes-soc {
+    color: white;
+}
+
+/* FIN ESTILADO FOOTER */
+
+/* ANIMACIONES Y TRANSICIONES*/
+.box {
+    transition: all 2s;
+}
+
+.box:hover {
+    transform: scale(1.1);
+}
+
+#trans:hover {
+    transition: 0.75s;
+    color: gray;
+    font-size: 20px;
+}
+
+.image {
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.overlay {
+    transition: .5 ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.img-container:hover .image {
+    opacity: 0.2;
+}
+
+.img-container:hover .overlay {
+    opacity: 1;
+} 
+
+.team img:hover {
+    filter: saturate(180%);
+}  
+
+#trans_1:hover {
+    transition: 0.75s;
+    color: rgb(28, 28, 124);
+    font-size: 1.3rem;
+    transform: scale(1);
+}
+
+#trans_2:hover {
+    transition: 0.75s;
+    color: rgb(28, 28, 124);
+    font-size: 1.6rem;
+    transform: scale(1.1);
+} 
+
+
+/* FIN ANIMACIONES Y TRANSICIONES*/
+
+/* MEDIA  QUERY*/
+
+
+@media (min-width:600px) {
+    .contenedor {
+        width: 60%;
+        margin-left: 20%;
+    }
+
+}    
+
+@media (max-width:600px) {
+
+    .team img {
+        width: 200px;
+        height: 275px;
+        margin-bottom: 20px;
+    } 
+
+    #nosotros { 
+        justify-content: left;
+        width: 100%;
+        margin: auto;
+        padding-top: 1rem;
+    } 
+
+    #equipo { 
+        justify-content: left;
+        width: 100%;
+        margin: auto;
+    }
+}   
