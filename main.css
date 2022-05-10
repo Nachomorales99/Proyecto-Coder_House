@@ -323,7 +323,7 @@ footer ul li a {
     transform: translate(-50%, -50%);
 }
 
-.img-container:hover .image {
+.card .img-container:hover img {
     opacity: 0.2;
 }
 
