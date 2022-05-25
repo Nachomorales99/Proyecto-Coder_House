@@ -1,0 +1,21 @@
+nav{
+    background-color: $color-primary;
+
+    .logo{ 
+        width: 65px;
+        height: 65px;
+    } 
+
+    #trans{
+        display: block;
+        padding: 0.5rem 1rem;
+        font-size: 18px;
+        color: $color-secondary;
+
+        &:hover{ 
+            transition: 0.75s;
+            color: $color-third;
+            font-size: 20px;
+        }
+    }
+} 

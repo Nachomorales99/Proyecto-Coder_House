@@ -1,0 +1,48 @@
+.titulo4 {
+    @extend .portada;
+    color: $portada4;
+}
+
+#nosotros {
+    width: 100%;
+    margin: 70px;
+
+    #carru_nosotros {
+        border-radius: 5%;
+    }
+
+    .parrafo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        p {
+            @include textos (20px, 500, center, 'Times New Roman');
+            padding: 20px;
+            background: rgb(6, 107, 22);
+            background: radial-gradient(circle, rgba(6, 107, 22, 1) 24%, rgba(27, 71, 28, 1) 47%, rgba(4, 119, 65, 1) 86%);
+            border-radius: 3%;
+            color: $color-secondary;
+        }
+    }
+} 
+
+@media (max-width:767px) {
+    .parrafo{
+        margin-top: 2rem;
+    }
+
+}
+
+@media (max-width:600px) {
+    #nosotros {
+        justify-content: center;
+        width: 100%;
+        margin: auto;
+        padding-top: 1rem;
+
+        p {
+            margin: 2rem;
+        }
+    }
+}

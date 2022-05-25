@@ -1,0 +1,79 @@
+footer {
+    width: 100%;
+    padding: 1rem 0px;
+    background-size: cover;
+    text-align: center;
+
+    .footer-title { 
+        padding-top: 1rem;
+        color: $color-secondary;
+        display: flex;
+        justify-content: center;
+        padding-left: 1rem;
+    }
+
+    .redes-sociales {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-left: 1.5rem;
+        gap: 1em;
+        font-size: 2rem; 
+
+        //Map 
+
+        $redes: (twitter: #00acee,
+                whatsapp: #00bb2d,
+                facebook: #3b5998,
+                instagram: #dd2a7b,
+                mail: #ea4335,
+            );
+
+        @each $red,
+        $color in $redes {
+            .red-#{$red} {
+                color: $color;
+            }
+        } 
+
+        .redes-soc{
+
+            &:hover {
+                transition: 0.75s;
+                font-size: 2.2rem;
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    #trans_1 {
+        display: block;
+        padding: 0.2rem 0.2rem;
+        font-size: 18px;
+        text-decoration: none;
+        color: $color-secondary;
+
+        &:hover {
+            transition: 0.75s;
+            color: $color-fourth;
+            font-size: 1.3rem;
+            transform: scale(1);
+        }
+    } 
+
+    .footer-logo {
+        display: flex;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        display: flex;
+        width: 150px;
+        height: 150px;
+        justify-content: center;
+    }
+
+    #pie {
+        font-size: 1.5rem;
+        color: $color-secondary;
+    }
+}

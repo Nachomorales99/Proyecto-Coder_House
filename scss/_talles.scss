@@ -1,0 +1,71 @@
+.titulo6 {
+    @extend .portada;
+    color: $portada6;
+}
+
+#tabla {
+
+    .container-table {
+        width: 100%;
+        background: whitesmoke;
+        margin: 50px auto;
+        box-shadow: 0 0 20px #333;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 50px;
+
+        .table__title {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            background: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 1.9em;
+
+            @media (max-width:992px) {
+                font-size: 1.4em;
+            }
+
+        }
+
+        .table__header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+
+        .table__item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            font-size: 1.2em;
+        }
+    }
+
+    .tablita {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            margin-bottom: 3rem;
+        }
+    }
+
+    .tablita2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            margin-bottom: 3rem;
+            margin-top: 3rem;
+        }
+    }
+}

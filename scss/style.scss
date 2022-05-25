@@ -1,0 +1,174 @@
+@import "variables";
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+
+    .portada {
+        font-family: 'Times New Roman', Times, serif;
+        text-shadow: 1px 1px 2px;
+        margin: 1.5rem;
+        font-size: $titulo / 4;
+
+        @media (max-width:900px) {
+            font-size: $titulo / 6;
+
+        }
+
+        @media (max-width:600px) {
+            font-size: $titulo / 8;
+
+        }
+    }
+
+    .carru {
+        margin-bottom: 30px;
+
+        img {
+            @media (min-width:1200px) {
+                height: 400px;
+            }
+        }
+    }
+}
+
+//Mixin
+@mixin textos ($dimension, $grosor, $alineacion, $fuente) {
+    font-size: $dimension;
+    font-weight: $grosor;
+    text-align: $alineacion;
+    font-family: $fuente;
+}
+
+@import "nav";
+@import "ropa";
+@import "equipo";
+@import "talles";
+@import "mayorista";
+@import "us";
+@import "footer";
+
+// //Operaciones 
+
+// $spacing: 5px;
+
+// div {
+//     padding: $spacing * 2;
+//     padding: $spacing + 2;
+//     padding: $spacing - 2;
+//     padding: $spacing / 2;
+// }
+
+// //Condicionales 
+
+// $animal: perro;
+
+// div {
+//     @if $animal==gato {
+//         color: aquamarine;
+//     }
+
+//     @else if $animal !=gato {
+//         color: green;
+//     }
+// }
+
+// //Bucles 
+
+// @for $i from 1 through 6 {
+
+//     h#{$i} {
+//         font-size: 24em / $i;
+//     }
+// }
+
+// @for $i from 1 through 6 {
+
+//     .type-heading-#{$i} {
+//         font-size: 24em / $i;
+//     }
+// }
+
+// //Each 
+
+// $lista-colores: red,
+// green,
+// yellow,
+// blue;
+
+// @each $color in $lista-colores {
+
+//     .color-#{$color} {
+//         background-color: $color;
+//     }
+// }
+
+// //Mapas 
+
+// $redes: (
+//     twitter: rgb(6, 112, 173),
+//     facebook: rgb(3, 40, 245), 
+//     instagram: rgb(179, 19, 194),
+// ); 
+
+// @each $red, $color in $redes {
+//     .red-#{$red} {
+//         color:$color;
+//     }
+// } 
+
+// //Extend 
+
+// .boton{ 
+//     border: solid 2px;
+//     padding: 10px 15px;
+//     margin: 5px;
+// } 
+
+// .bton-primario{ 
+//     @extend .boton;
+//     border-color: red;
+//     background-color: red;
+// } 
+
+// //Mixins  
+
+// //FORMA 1
+
+// @mixin size ($alto, $ancho, $espaciado) {
+//     height: $alto;
+//     width: $ancho;
+//     margin: $espaciado;
+// } 
+
+// div{
+//     @include size(2px, 5px, 10px);
+
+//     display: flex; 
+//     text-align: center;
+// } 
+
+// //FORMA 2
+
+// @mixin size {
+//     height: 5px;
+//     width: 20px;
+//     margin: 5px 15px 2px 25px;
+// } 
+
+// div{
+//     @include size;
+
+//     display: flex; 
+//     text-align: center;
+// } 

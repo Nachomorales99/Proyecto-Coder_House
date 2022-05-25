@@ -1,0 +1,78 @@
+.titulo5 {
+    @extend .portada;
+    color: $portada5;
+}
+
+#equipo {
+    margin: 70px;
+    width: 100%;
+
+    .team {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            height: 350px;
+            width: 350px;
+            border-radius: 10%;
+            box-shadow: 0 0 20px $color-third;
+
+            &:hover {
+                filter: saturate(180%);
+            }
+        }
+    }
+
+    .nombres {
+        display: grid;
+
+        .nombre{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $color-primary;
+            font-family: 'Times New Roman', Times, serif;
+            text-shadow: 1px 1px 2px $color-primary;
+            font-size: $titulo / 10
+        } 
+
+        .funcion{
+            @extend .nombre;  
+            font-size: $titulo / 13
+        }
+    }
+
+
+    .texto {
+        @extend .parrafo;
+        background: rgb(2, 1, 28);
+        background: linear-gradient(90deg, rgba(2, 1, 28, 1) 22%, rgba(2, 29, 34, 1) 57%, rgba(88, 88, 88, 1) 91%);
+        border-radius: 5%;
+
+        p {
+            @include textos (20px, 500, center, 'Times New Roman');
+            color: $color-secondary;
+            padding: 20px;
+
+        }
+    }
+}
+
+@media (max-width:600px) {
+    #equipo {
+        justify-content: center;
+        width: 100%;
+        margin: auto;
+        margin-bottom: 2rem;
+    }
+
+    .team {
+        img {
+            height: 300px;
+            width: 30px;
+            margin: 1.2rem;
+        }
+    }
+
+}
