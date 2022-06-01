@@ -6,16 +6,18 @@ nav{
         height: 65px;
     } 
 
-    #trans{
+    .trans{
+        margin-left: 2px;
+        margin-right: 2px;
         display: block;
         padding: 0.5rem 1rem;
-        font-size: 18px;
+        font-size: 16px;
         color: $color-secondary;
 
         &:hover{ 
             transition: 0.75s;
             color: $color-third;
-            font-size: 20px;
+            font-size: 17px;
         }
     }
 } 

@@ -32,15 +32,17 @@ nav {
   nav .logo {
     width: 65px;
     height: 65px; }
-  nav #trans {
+  nav .trans {
+    margin-left: 2px;
+    margin-right: 2px;
     display: block;
     padding: 0.5rem 1rem;
-    font-size: 18px;
+    font-size: 16px;
     color: white; }
-    nav #trans:hover {
+    nav .trans:hover {
       transition: 0.75s;
       color: #333;
-      font-size: 20px; }
+      font-size: 17px; }
 
 .titulo1 {
   color: #5e0404; }
