@@ -39,7 +39,8 @@ body {
         height: 400px; } }
 
 nav {
-  background-color: #000000; }
+  background-color: #000000;
+  font-family: 'Lora', serif; }
   nav .logo {
     width: 65px;
     height: 65px;
@@ -53,12 +54,12 @@ nav {
     margin-right: 2px;
     display: block;
     padding: 0.5rem 1rem;
-    font-size: 16px;
+    font-size: 17px;
     color: white; }
     nav .trans:hover {
       transition: 0.75s;
       color: #333;
-      font-size: 17px; }
+      font-size: 18px; }
 
 .titulo1 {
   color: #5e0404; }
@@ -272,7 +273,8 @@ footer {
   width: 100%;
   padding: 1rem 0px;
   background-size: cover;
-  text-align: center; }
+  text-align: center;
+  font-family: 'Lora', serif; }
   footer .footer-title {
     padding-top: 1rem;
     color: white;
