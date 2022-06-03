@@ -1,3 +1,14 @@
+@keyframes fade-left {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0; }
+  50% {
+    transform: translateX(-10px);
+    opacity: .5; }
+  100% {
+    transform: translateX(0);
+    opacity: 1; } }
+
 * {
   margin: 0;
   padding: 0;
@@ -31,7 +42,12 @@ nav {
   background-color: #000000; }
   nav .logo {
     width: 65px;
-    height: 65px; }
+    height: 65px;
+    animation-name: fade-left;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-duration: 1.5s;
+    animation-delay: 0; }
   nav .trans {
     margin-left: 2px;
     margin-right: 2px;

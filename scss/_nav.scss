@@ -3,7 +3,13 @@ nav{
 
     .logo{ 
         width: 65px;
-        height: 65px;
+        height: 65px; 
+
+        animation-name: fade-left; 
+        animation-iteration-count: 1;
+        animation-timing-function: ease;
+        animation-duration: 1.5s;
+        animation-delay: 0;
     } 
 
     .trans{

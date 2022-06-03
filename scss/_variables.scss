@@ -14,4 +14,27 @@ $portada5: rgb(2, 1, 28);
 $portada6: rgb(124, 82, 4);
 
 //Variables para operadores 
-$titulo: 20rem;
+$titulo: 20rem; 
+
+//Animacion
+
+@keyframes fade-left {
+
+    0% {
+
+        transform: translateX(-100px); 
+        opacity: 0;
+    } 
+
+    50% {
+
+        transform: translateX(-10px); 
+        opacity: .5;
+    } 
+
+    100% {
+
+        transform: translateX(0); 
+        opacity: 1;
+    }
+}
