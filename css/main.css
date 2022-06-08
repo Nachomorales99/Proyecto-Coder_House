@@ -68,13 +68,18 @@ nav {
   color: #060686; }
 
 .card {
-  margin: auto;
-  margin-top: 1rem;
+  margin: 1.2rem;
   width: 302px;
-  height: 580px;
+  height: 560px;
   background-color: #000000;
   border-color: white;
-  color: white; }
+  color: white;
+  border-radius: 5%; }
+  .card .card-tittle {
+    display: flex;
+    justify-content: center;
+    font-family: 'Lora', serif;
+    font-size: 1.5em; }
   .card .img-container {
     position: relative;
     width: 300px;
@@ -85,7 +90,8 @@ nav {
       opacity: 1; }
     .card .img-container .image {
       transition: .5s ease;
-      backface-visibility: hidden; }
+      backface-visibility: hidden;
+      border-radius: 5%; }
     .card .img-container .overlay {
       transition: .5 ease;
       opacity: 0;
@@ -98,7 +104,7 @@ nav {
     font-size: 1.2em; }
   .card #precio1 {
     font-size: 1em;
-    text-decoration: line-through chocolate;
+    text-decoration: line-through 3px  chocolate;
     font-style: normal;
     color: white; }
   .card #precio2 {
