@@ -11,13 +11,16 @@
 .card {
     margin: auto;
     margin-top: 1rem;
-    width: 300px;
-    height: 550px;
+    width: 302px;
+    height: 580px; 
+    background-color: $color-primary;
+    border-color: $color-secondary; 
+    color: $color-secondary;
 
     .img-container {
         position: relative;
         width: 300px;
-        height: 500px;
+        height: 550px;
 
         &:hover {
             img {
@@ -52,14 +55,16 @@
 
     #precio1 {
         font-size: 1em;
-        text-decoration: line-through; 
-        font-style: normal;
+        text-decoration: line-through chocolate; 
+        font-style: normal; 
+        color: $color-secondary;
     }
 
     #precio2 { 
         font-size: 1.2em;
         font-weight: bold;
         font-style: italic;
+        color: $color-secondary;
     }
 }
 

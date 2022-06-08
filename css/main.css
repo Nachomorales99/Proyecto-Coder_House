@@ -70,12 +70,15 @@ nav {
 .card {
   margin: auto;
   margin-top: 1rem;
-  width: 300px;
-  height: 550px; }
+  width: 302px;
+  height: 580px;
+  background-color: #000000;
+  border-color: white;
+  color: white; }
   .card .img-container {
     position: relative;
     width: 300px;
-    height: 500px; }
+    height: 550px; }
     .card .img-container:hover img {
       opacity: 0.2; }
     .card .img-container:hover .overlay {
@@ -95,12 +98,14 @@ nav {
     font-size: 1.2em; }
   .card #precio1 {
     font-size: 1em;
-    text-decoration: line-through;
-    font-style: normal; }
+    text-decoration: line-through chocolate;
+    font-style: normal;
+    color: white; }
   .card #precio2 {
     font-size: 1.2em;
     font-weight: bold;
-    font-style: italic; }
+    font-style: italic;
+    color: white; }
 
 .pags {
   display: flex;
@@ -303,13 +308,13 @@ footer {
       transition: 0.75s;
       font-size: 2.2rem;
       transform: scale(1.1); }
-  footer #trans_1 {
+  footer .sitemap {
     display: block;
     padding: 0.2rem 0.2rem;
     font-size: 18px;
     text-decoration: none;
     color: white; }
-    footer #trans_1:hover {
+    footer .sitemap:hover {
       transition: 0.75s;
       color: #1c1c7c;
       font-size: 1.3rem;
