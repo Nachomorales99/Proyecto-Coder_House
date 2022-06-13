@@ -101,12 +101,16 @@ nav {
       transform: translate(-50%, -50%); }
   .card h6 {
     font-style: italic;
+    font-weight: bold;
     font-size: 1.2em; }
+  .card .card-text {
+    font-weight: 100; }
   .card #precio1 {
     font-size: 1em;
     text-decoration: line-through 3px  chocolate;
     font-style: normal;
-    color: white; }
+    color: white;
+    font-weight: 100; }
   .card #precio2 {
     font-size: 1.2em;
     font-weight: bold;
@@ -232,8 +236,9 @@ nav {
 #form {
   margin-top: 50px;
   margin-bottom: 50px;
-  background-color: #0e141a;
-  color: white; }
+  background-color: #000000;
+  color: white;
+  border-radius: 2%; }
   #form option {
     background-color: #0e141a;
     color: white; }
@@ -241,8 +246,7 @@ nav {
     margin: 1rem;
     background: #000000;
     box-shadow: 2%;
-    border-radius: 10%;
-    border-color: #0e141a; }
+    border-radius: 10%; }
 
 .titulo4 {
   color: #0d6106; }

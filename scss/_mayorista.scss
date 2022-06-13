@@ -6,8 +6,9 @@
 #form {
     margin-top: 50px;
     margin-bottom: 50px;
-    background-color: $color-fifty;
+    background-color: $color-primary;
     color: $color-secondary;
+    border-radius: 2%;
 
         option {
             background-color: $color-fifty;
@@ -19,7 +20,5 @@
         background: $color-primary;
         box-shadow: 2%;
         border-radius: 10%;
-        border-color: $color-fifty;
-
     }
 }
