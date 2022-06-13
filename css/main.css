@@ -297,7 +297,6 @@ footer {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding-left: 1.5rem;
     gap: 1em;
     font-size: 2rem; }
     footer .redes-sociales .red-twitter {
@@ -336,9 +335,14 @@ footer {
     margin-bottom: 25px;
     width: 150px;
     height: 150px;
-    justify-content: center; }
-  footer #pie {
-    display: flex;
     justify-content: center;
-    font-size: 1.5rem;
-    color: white; }
+    align-items: center; }
+  footer .pie-pagina {
+    padding: 0;
+    margin: 0; }
+    footer .pie-pagina #pie {
+      display: flex;
+      justify-content: center;
+      padding: 8px;
+      font-size: 1.5rem;
+      color: white; }
