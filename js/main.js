@@ -16,37 +16,7 @@ while ((resp != "N") && (resp != "n")) {
     switch (num) {
         case 1:
 
-            do {
-                color = prompt("Ingrese el numero del color: 1-Blanca 2-Negra 3-Gris");
-
-                if (color == "1") {
-                    color = "Blanca";
-                    break;
-
-                } else {
-
-                    if (color == "2") {
-                        color = "Negra";
-                        break;
-
-                    } else {
-
-                        if (color == "3") {
-                            color = "Gris";
-                            break;
-
-                        } else {
-                            alert("Ingrese un color valido")
-                        }
-                    }
-                }
-
-                color.toLowerCase();
-
-            } while (color == "blanca" || "negra" || "gris")
-
-            talle = prompt("Ingrese el talle: S - M - L - XL- XXL- XXXL");
-            talle = talle.toUpperCase();
+            producto();
 
             let tiger = {
                 diseño: "Tiger",
@@ -63,37 +33,7 @@ while ((resp != "N") && (resp != "n")) {
 
         case 2:
 
-            do {
-                color = prompt("Ingrese el numero del color: 1-Blanca 2-Negra 3-Gris");
-
-                if (color == "1") {
-                    color = "Blanca";
-                    break;
-
-                } else {
-
-                    if (color == "2") {
-                        color = "Negra";
-                        break;
-
-                    } else {
-
-                        if (color == "3") {
-                            color = "Gris";
-                            break;
-
-                        } else {
-                            alert("Ingrese un color valido")
-                        }
-                    }
-                }
-
-                color.toLowerCase();
-
-            } while (color == "blanca" || "negra" || "gris")
-
-            talle = prompt("Ingrese el talle: S - M - L - XL- XXL- XXXL");
-            talle = talle.toUpperCase();
+            producto();
 
             let classic = {
                 diseño: "Classic",
@@ -110,37 +50,7 @@ while ((resp != "N") && (resp != "n")) {
 
         case 3:
 
-            do {
-                color = prompt("Ingrese el numero del color: 1-Blanca 2-Negra 3-Gris");
-
-                if (color == "1") {
-                    color = "Blanca";
-                    break;
-
-                } else {
-
-                    if (color == "2") {
-                        color = "Negra";
-                        break;
-
-                    } else {
-
-                        if (color == "3") {
-                            color = "Gris";
-                            break;
-
-                        } else {
-                            alert("Ingrese un color valido")
-                        }
-                    }
-                }
-
-                color.toLowerCase();
-
-            } while (color == "blanca" || "negra" || "gris")
-
-            talle = prompt("Ingrese el talle: S - M - L - XL- XXL- XXXL");
-            talle = talle.toUpperCase();
+            producto();
 
             let bib = {
                 diseño: "BIB",
@@ -157,37 +67,7 @@ while ((resp != "N") && (resp != "n")) {
 
         case 4:
 
-            do {
-                color = prompt("Ingrese el numero del color: 1-Blanca 2-Negra 3-Gris");
-
-                if (color == "1") {
-                    color = "Blanca";
-                    break;
-
-                } else {
-
-                    if (color == "2") {
-                        color = "Negra";
-                        break;
-
-                    } else {
-
-                        if (color == "3") {
-                            color = "Gris";
-                            break;
-
-                        } else {
-                            alert("Ingrese un color valido")
-                        }
-                    }
-                }
-
-                color.toLowerCase();
-
-            } while (color == "blanca" || "negra" || "gris")
-
-            talle = prompt("Ingrese el talle: S - M - L - XL- XXL- XXXL");
-            talle = talle.toUpperCase();
+            producto();
 
             let broken = {
                 diseño: "Broken",
@@ -204,37 +84,7 @@ while ((resp != "N") && (resp != "n")) {
 
         case 5:
 
-            do {
-                color = prompt("Ingrese el numero del color: 1-Blanca 2-Negra 3-Gris");
-
-                if (color == "1") {
-                    color = "Blanca";
-                    break;
-
-                } else {
-
-                    if (color == "2") {
-                        color = "Negra";
-                        break;
-
-                    } else {
-
-                        if (color == "3") {
-                            color = "Gris";
-                            break;
-
-                        } else {
-                            alert("Ingrese un color valido")
-                        }
-                    }
-                }
-
-                color.toLowerCase();
-
-            } while (color == "blanca" || "negra" || "gris")
-
-            talle = prompt("Ingrese el talle: S - M - L - XL- XXL- XXXL");
-            talle = talle.toUpperCase();
+            producto();
 
             let kids = {
                 diseño: "Kids",
@@ -251,37 +101,7 @@ while ((resp != "N") && (resp != "n")) {
 
         case 6:
 
-            do {
-                color = prompt("Ingrese el numero del color: 1-Blanca 2-Negra 3-Gris");
-
-                if (color == "1") {
-                    color = "Blanca";
-                    break;
-
-                } else {
-
-                    if (color == "2") {
-                        color = "Negra";
-                        break;
-
-                    } else {
-
-                        if (color == "3") {
-                            color = "Gris";
-                            break;
-
-                        } else {
-                            alert("Ingrese un color valido")
-                        }
-                    }
-                }
-
-                color.toLowerCase();
-
-            } while (color == "blanca" || "negra" || "gris")
-
-            talle = prompt("Ingrese el talle: S - M - L - XL- XXL- XXXL");
-            talle = talle.toUpperCase();
+            producto();
 
             let type = {
                 diseño: "Type",
@@ -298,37 +118,7 @@ while ((resp != "N") && (resp != "n")) {
 
         case 7:
 
-            do {
-                color = prompt("Ingrese el numero del color: 1-Blanca 2-Negra 3-Gris");
-
-                if (color == "1") {
-                    color = "Blanca";
-                    break;
-
-                } else {
-
-                    if (color == "2") {
-                        color = "Negra";
-                        break;
-
-                    } else {
-
-                        if (color == "3") {
-                            color = "Gris";
-                            break;
-
-                        } else {
-                            alert("Ingrese un color valido")
-                        }
-                    }
-                }
-
-                color.toLowerCase();
-
-            } while (color == "blanca" || "negra" || "gris")
-
-            talle = prompt("Ingrese el talle: S - M - L - XL- XXL- XXXL");
-            talle = talle.toUpperCase();
+            producto();
 
             let cuatroVeinte = {
                 diseño: "4.20",
@@ -345,37 +135,7 @@ while ((resp != "N") && (resp != "n")) {
 
         case 8:
 
-            do {
-                color = prompt("Ingrese el numero del color: 1-Blanca 2-Negra 3-Gris");
-
-                if (color == "1") {
-                    color = "Blanca";
-                    break;
-
-                } else {
-
-                    if (color == "2") {
-                        color = "Negra";
-                        break;
-
-                    } else {
-
-                        if (color == "3") {
-                            color = "Gris";
-                            break;
-
-                        } else {
-                            alert("Ingrese un color valido")
-                        }
-                    }
-                }
-
-                color.toLowerCase();
-
-            } while (color == "blanca" || "negra" || "gris")
-
-            talle = prompt("Ingrese el talle: S - M - L - XL- XXL- XXXL");
-            talle = talle.toUpperCase();
+            producto();
 
             let forever = {
                 diseño: "Forever",
@@ -392,37 +152,7 @@ while ((resp != "N") && (resp != "n")) {
 
         case 9:
 
-            do {
-                color = prompt("Ingrese el numero del color: 1-Blanca 2-Negra 3-Gris");
-
-                if (color == "1") {
-                    color = "Blanca";
-                    break;
-
-                } else {
-
-                    if (color == "2") {
-                        color = "Negra";
-                        break;
-
-                    } else {
-
-                        if (color == "3") {
-                            color = "Gris";
-                            break;
-
-                        } else {
-                            alert("Ingrese un color valido")
-                        }
-                    }
-                }
-
-                color.toLowerCase();
-
-            } while (color == "blanca" || "negra" || "gris")
-
-            talle = prompt("Ingrese el talle: S - M - L - XL- XXL- XXXL");
-            talle = talle.toUpperCase();
+            producto();
 
             let chill = {
                 diseño: "Chill",
@@ -445,7 +175,7 @@ while ((resp != "N") && (resp != "n")) {
     resp = prompt("¿Desea agregar otro producto? S/N");
 }
 
-cant(); 
+cant();
 calcularIva();
 
 alert(`Usted añadio ${cantRemeras} productos. El total a pagar es $ ${precioTotal}`)
@@ -455,9 +185,46 @@ alert(`Gracias por su compra`)
 function calcularIva() {
     precioTotal = (precio * carrito.length) * iva;
     return;
-} 
+}
 
-function cant(){
+function cant() {
     cantRemeras = carrito.length;
+    return;
+}
+
+function producto() {
+
+    do {
+        color = prompt("Ingrese el numero del color: 1-Blanca 2-Negra 3-Gris");
+
+        if (color == "1") {
+            color = "Blanca";
+            break;
+
+        } else {
+
+            if (color == "2") {
+                color = "Negra";
+                break;
+
+            } else {
+
+                if (color == "3") {
+                    color = "Gris";
+                    break;
+
+                } else {
+                    alert("Ingrese un color valido")
+                }
+            }
+        }
+
+        color.toLowerCase();
+
+    } while (color == "blanca" || "negra" || "gris")
+
+    talle = prompt("Ingrese el talle: S - M - L - XL- XXL- XXXL");
+    talle = talle.toUpperCase();
+
     return;
 }
