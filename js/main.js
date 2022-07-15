@@ -1,9 +1,10 @@
 alert("Bienvenido a Black Owl Streetwear");
 
-let num, resp, color, talle, diseño, precioTotal, cantRemeras;
+let num, resp, color, talle, diseño, precioTotal, cantRemeras, formaDePago, pago;
 let carrito = [];
 let precio = 2500,
-    iva = 1.21;
+    iva = 1.21,
+    consul = " "; 
 
 alert("¿Que diseño desea agregar al carrito?");
 
@@ -11,7 +12,7 @@ resp = "s";
 
 while ((resp != "N") && (resp != "n")) {
 
-    num = parseInt(prompt("Ingrese el numero del diseño que desea: 1-TIGER    2-CLASSIC    3-BIB         4-BROKEN    5-KIDS    6-TYPE    7-4.20    8-FOREVER    9-CHILL"));
+    num = parseInt(prompt("Ingrese el numero del diseño que desea: 1-TIGER  2-CLASSIC  3-BIB  4-BROKEN  5-KIDS  6-TYPE  7-4.20  8-FOREVER  9-CHILL"));
 
     switch (num) {
         case 1:
@@ -175,10 +176,77 @@ while ((resp != "N") && (resp != "n")) {
     resp = prompt("¿Desea agregar otro producto? S/N");
 }
 
+let tarjetas = [{
+        credito: "visa"
+    },
+    {
+        credito: "master sard"
+    },
+    {
+        credito: "amex"
+    },
+    {
+        debito: "visa"
+    },
+    {
+        debito: "master card"
+    },
+    {
+        debito: "amex"
+    },
+];
+
+pago = " ";
+
+while (pago == " ") {
+
+    formaDePago = parseInt(prompt("¿Como desea abonar? 1-Efectivo  2-Tarjeta  3-Tranferencia  4-Cryptos"));
+
+    switch (formaDePago) {
+        case 1:
+            pago = "Efectivo"
+            break;
+
+        case 2:
+
+            consul = prompt("¿Desea consultar las tarjetas disponibles? S/N");
+            consul = consul.toUpperCase();
+
+            if (consul == "S") {
+                consultarTarjetas();
+                break;
+
+            } else {
+
+                formaDePago = parseInt(prompt("¿Que tarjeta desea usar? 1-Tarjeta de Debito  2-Tarjeta de Credito"));
+
+                if (formaDePago == 1) {
+                    pago = "Tarjeta de Debito";
+                } else {
+                    pago = "Tarjeta de Credito";
+                }
+            }
+
+            break;
+
+        case 3:
+            pago = "Transferencia"
+            break;
+
+        case 4:
+            pago = "Cryptos"
+            break;
+
+        default:
+            alert("Ingrese una opcion valida")
+            break;
+    }
+}
+
 cant();
 calcularIva();
 
-alert(`Usted añadio ${cantRemeras} productos. El total a pagar es $ ${precioTotal}`)
+alert(`Usted añadio ${cantRemeras} productos, el total a pagar es $${precioTotal} y eligio como forma de pago ${pago}`)
 
 alert(`Gracias por su compra`)
 
@@ -226,5 +294,31 @@ function producto() {
     talle = prompt("Ingrese el talle: S - M - L - XL- XXL- XXXL");
     talle = talle.toUpperCase();
 
+    return;
+}
+
+function consultarTarjetas() {
+
+    let pregunta = prompt("¿Que tarjeta usa? Ej: Visa , Master Card, Amex");
+    pregunta = pregunta.toLowerCase();
+
+    let buscarTarjeta = tarjetas.filter(tarjeta => tarjeta.credito == pregunta); 
+
+    let buscarTarjeta2 = tarjetas.filter(tarjeta => tarjeta.debito == pregunta);
+
+    alert(`Puede abonar con Tarjeta de credito ${buscarTarjeta} y Tarjeta de debito ${buscarTarjeta2}`);
+
+    console.log(buscarTarjeta);
+    console.log(buscarTarjeta2);
+
+    //EZE ME HE ROTO LA CABEZA BUSCANDO LA MANERA DE IMPRIMIR POR PANTALLA EL RESULTADO DE LA BUSQUEDA Y NO LO LOGRO PERO SI LO HAGO POR CONSOLE.LOG SI SE IMPRIME LO QUE QUIERO, ESPERO QUE SIRVA PARA ESTA ENTREGA, PERO ME GUSTARIA SI ME PODES SACAR ESTA DUDA 
+
+    formaDePago = prompt("¿Que tarjeta desea usar? 1-Tarjeta de Debito  2-Tarjeta de Credito");
+
+    if (formaDePago == 1) {
+        pago = "Tarjeta de Debito"
+    } else {
+        pago = "Tarjeta de Credito"
+    }
     return;
 }
