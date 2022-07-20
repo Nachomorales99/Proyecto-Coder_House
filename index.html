@@ -16,8 +16,6 @@
         href="https://res.cloudinary.com/nacho-morales/image/upload/v1652926510/multimedia/Icono_yuzgfd.jpg">
     <!-- TITLE -->
     <title>Black Owl</title>
-    <!-- LINK JS -->
-    <script src="./js/main.js"></script>
     <!-- LINK BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -43,6 +41,11 @@
                         src="https://res.cloudinary.com/nacho-morales/image/upload/v1654048547/multimedia/Logo_vcnfuf.jpg"
                         alt="logo"></a>
             </div>
+
+            <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                aria-controls="offcanvasRight"><i class="fas fa-shopping-cart"></i>
+                <span id="contador-carrito">0</span>
+            </button>
 
             <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
@@ -131,71 +134,40 @@
     <!--FIN CARUSEL-->
 
     <!--REMERAS -->
-
-    <section class="gallery">
-        <div class="container">
-            <div class="row">
-                <!-- REMERA 1-->
-                <div class="col-lg-4 mb-3">
-                    <div class="card">
-                        <div class="img-container">
-                            <img src="https://res.cloudinary.com/nacho-morales/image/upload/v1652926505/multimedia/Forever_rkc4ud.jpg"
-                                alt="Forever" class="image card-img-top" data-aos="fade-up">
+                <main id="card-remeras">
+                    <!-- <div class="remeras">
+                        <div class="card">
+                            <img src="https://res.cloudinary.com/nacho-morales/image/upload/v1652926497/multimedia/Basic_ilaokz.jpg"
+                                class="card-img-top" alt="..." class="image card-img-top" data-aos="fade-up">
                             <div class="overlay">
                                 <button class="btn btn-outline-secondary btn-sm"><i
                                         class="fas fa-shopping-cart mr-2">Agregar al carrito</i></button>
                             </div>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-tittle">Remera Forever</h5>
-                            <h6 class="card-subtitle mb-2">$2.500</h6>
-                            <p class="card-text">Llevamos el negro como una parte de nosotros por siempre</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- REMERA 2  -->
-                <div class="col-lg-4 mb-3">
-                    <div class="card">
-                        <div class="img-container">
-                            <img src="https://res.cloudinary.com/nacho-morales/image/upload/v1652926511/multimedia/Tiger_m0krqg.jpg"
-                                alt="Tiger" class="image card-img-top" data-aos="fade-up">
-                            <div class="overlay">
-                                <button class="btn btn-outline-secondary btn-sm"><i
-                                        class="fas fa-shopping-cart mr-2">Agregar al carrito</i></button>
+                            <div class="card-body">
+                                <h5 class="card-tittle">Remera Basic</h5>
+                                <h6 class="card-subtitle mb-2">$2.500</h6>
+                                <p class="card-text">Primer diseño de Black Owl. Basico, simple y con mucha onda</p>
                             </div>
                         </div>
-                        <div class="card-body">
-                            <h5 class="card-tittle">Remera Tiger</h5>
-                            <h6 class="card-subtitle mb-2">$2.500</h6>
-                            <p class="card-text">Saca tu tigre interior. Black Owl... or Tiger Whatever</p>
-                        </div>
-                    </div>
-                </div>
+                    </div> -->
+                </main>
 
-                <!-- REMERA 3-->
-                <div class="col-lg-4 mb-3">
-                    <div class="card">
-                        <div class="img-container">
-                            <img src="https://res.cloudinary.com/nacho-morales/image/upload/v1652926498/multimedia/Chill_lrmqgu.jpg"
-                                alt="Chill" class="image card-img-top" data-aos="fade-up">
-                            <div class="overlay">
-                                <button class="btn btn-outline-secondary btn-sm"><i
-                                        class="fas fa-shopping-cart mr-2">Agregar al carrito</i></button>
-                            </div>
-                        </div>
-
-                        <div class="card-body">
-                            <h5 class="card-tittle">Remera Chill</h5>
-                            <h6 class="card-subtitle mb-2">$2.500</h6>
-                            <p class="card-text">Hay momentos que es mejor relajarse y estar chill</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">Carrito de compras</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-    </section>
+        <div class="offcanvas-body" id="contenedor-carrito">
+            <!-- <p>Remera Tiger</p>
+            <p>Precio: $2500</p>
+            <button class="boton-eliminar"><i class="fas fa-trash-alt"></i></button> -->
+        </div>
+        <div class="offcanvas-footer">
+            <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+            <button type="button" class="btn btn-dark" data-bs-dismiss="offcanvas"
+                aria-label="Close">Cerrar</button>
+        </div>
+    </div>
 
     <!--FIN REMERAS -->
 
@@ -256,8 +228,7 @@
 
             <div class="col footer-logo">
                 <a href="index.html">
-                    <img
-                        src="https://res.cloudinary.com/nacho-morales/image/upload/v1654048547/multimedia/Logo_vcnfuf.jpg"
+                    <img src="https://res.cloudinary.com/nacho-morales/image/upload/v1654048547/multimedia/Logo_vcnfuf.jpg"
                         alt="logo black owl">
                 </a>
             </div>
@@ -271,6 +242,10 @@
     </footer>
 
     <!-- FIN FOOTER -->
+
+    <!-- LINK JS -->
+    <script src="./js/stock.js"></script>
+    <script src="./js/main.js"></script>
 
     <!-- LINK JAVASCRIPT + POPPER -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

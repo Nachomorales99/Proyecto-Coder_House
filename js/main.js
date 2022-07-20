@@ -1,4 +1,60 @@
-alert("Bienvenido a Black Owl Streetwear");
+let carritoDeCompras = []
+
+let contenedorRemeras = document.getElementById('card-remeras')
+let contenedorCarrito = document.getElementById('contenedor-carrito')
+let contadorCarrito = document.getElementById('contador-carrito')
+let total = document.getElementById('precioTotal')
+
+mostrarRemeras(stockRemeras)
+
+function mostrarRemeras() {
+    stockRemeras.forEach(item => {
+        let div = document.createElement('div')
+        div.className = 'remeras col-lg-4 mb-3'
+        div.innerHTML = `<div class="card">
+            <div class="img-container">
+                <img src="${item.img}"
+                    class="image card-img-top" data-aos="fade-up">
+                <div class="overlay">
+                    <button class="btn btn-outline-secondary btn-sm"><i
+                            class="fas fa-shopping-cart mr-2">Agregar al carrito</i></button>
+                </div>
+            </div>
+            <div class="card-body">
+                <h5 class="card-tittle">${item.nombre}</h5>
+                <h6 class="card-subtitle mb-2">$${item.precio}</h6>
+                <p class="card-text">${item.desc}</p>
+            </div>
+        </div>`
+
+        contenedorRemeras.appendChild(div)
+    })
+    agregarAlCarrito()
+}
+
+function agregarAlCarrito() {
+    let productoAgregar = prompt("¿Que diseño desea agregar al carrito? 1-Remera Tiger  2-Remera Classic  3-Remera BIB  4-Remera Broken  5-Remera Kids  6-Remera Type  7-Remera 4.20  8-Remera Forever  9-Remera Chill").toLowerCase()
+    let encontrado = stockRemeras.find(element => element.nombre.toLowerCase() == productoAgregar)
+    carritoDeCompras.push(encontrado)
+    mostrarCarrito(encontrado)
+    actualizarCarrito()
+}
+
+function mostrarCarrito(encontrado) {
+    let div = document.createElement('div')
+    div.className = 'productoEnCarrito'
+    div.innerHTML = `<p bg-white>${encontrado.nombre}</p>
+    <p bg-white>Precio: $${encontrado.precio}</p>
+    <button class="boton-eliminar"><i class="fa-solid fa-trash-can"></i></button>`
+    contenedorCarrito.appendChild(div)
+} 
+
+function actualizarCarrito(){
+    contadorCarrito.innerText = carritoDeCompras.length
+    total.innerText = carritoDeCompras.reduce((acc,el) => acc + el.precio, 0)
+}
+
+/*alert("Bienvenido a Black Owl Streetwear");
 
 let num, resp, color, talle, diseño, precioTotal, cantRemeras, formaDePago, pago;
 let carrito = [];
@@ -321,4 +377,5 @@ function consultarTarjetas() {
         pago = "Tarjeta de Credito"
     }
     return;
-}
+} 
+*/
