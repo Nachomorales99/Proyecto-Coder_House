@@ -61,8 +61,20 @@
                         <a class="trans nav-link" href="index.html">Home</a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="trans nav-link" href="./pages/indumentaria.html">Indumentaria</a>
+                    <li class="nav-item dropdown">
+                        <a class="trans nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Indumentaria
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./pages/indumentaria.html">Remeras</a></li>
+                            <li><a class="dropdown-item" href="./pages/buzos.html">Buzos</a></li>
+                            <li><a class="dropdown-item" href="./pages/joggers.html">Joggers</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="./pages/indumentaria.html">Ver Todo</a></li>
+                        </ul>
                     </li>
 
                     <li class="nav-item">
@@ -135,21 +147,14 @@
 
     <!--REMERAS -->
     <main id="card-ind">
-        <!-- <div class="ind">
-                        <div class="card" id="1">
-                            <img src="https://res.cloudinary.com/nacho-morales/image/upload/v1652926497/multimedia/Basic_ilaokz.jpg"
-                                class="card-img-top" alt="..." class="image card-img-top" data-aos="fade-up">
-                            <div class="overlay">
-                                <button class="agregar btn btn-outline-secondary btn-sm"><i
-                                        class="fas fa-shopping-cart mr-2">Agregar al carrito</i></button>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-tittle">Remera Basic</h5>
-                                <h6 class="card-subtitle mb-2">$2.500</h6>
-                                <p class="card-text">Primer diseño de Black Owl. Basico, simple y con mucha onda</p>
-                            </div>
-                        </div>
-                    </div> -->
+        <!-- <div class="card" id=${item.id}>
+            <img class="imagen" src="${item.img}" class="image card-img-top" data-aos="fade-up">
+            <h5 class="card-tittle">${item.nombre}</h5>
+            <h6 class="precio card-subtitle mb-2">$${item.precio}</h6>
+            <p class="card-text">${item.desc}</p>
+            <button class="agregar btn btn-outline-secondary btn-sm"><i class="fas fa-shopping-cart mr-2">Agregar al
+                    carrito</i></button>
+        </div> -->
     </main>
 
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
@@ -157,7 +162,7 @@
             <h5 class="offcanvas-title" id="offcanvasRightLabel">Carrito de compras</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        <div class="offcanvas-body" id="contenedor-carrito">
+        <div class="offcanvas-body">
             <!-- <p>Remera Tiger</p>
             <p>Precio: $2500</p>
             <button class="boton-eliminar"><i class="fas fa-trash-alt"></i></button> -->

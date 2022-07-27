@@ -18,8 +18,7 @@ function mostrarRemeras() {
                 <h6 class="precio card-subtitle mb-2">$${item.precio}</h6>
                 <p class="card-text">${item.desc}</p>
                 <button class="agregar btn btn-outline-secondary btn-sm"><i class="fas fa-shopping-cart mr-2">Agregar al carrito</i></button>
-            </div>
-        </div>`
+            </div>`
 
         contenedorRemeras.appendChild(div)
     })
@@ -31,22 +30,22 @@ for (let boton of agregarAlCarro) {
     boton.addEventListener("click", datos)
 }
 
-function datos(e) {
+function datos(e){
     let boton = e.target;
     let producto = boton.parentElement;
     let prodID = producto.getAttribute("id");
-    let prodNombre = producto.querySelector(".card-tittle").innerText;
-    let prodPrecio = producto.querySelector(".precio").innerText;
+    let prodNombre = producto.querySelector("h5").innerText;
+    let prodPrecio = producto.querySelector("h6").innerText;
     let prodImagen = producto.querySelector(".imagen").src;
 
-    agregarProducto(prodID, prodNombre, prodPrecio, prodImagen)
+    agregarProd(prodID, prodNombre, prodPrecio, prodImagen)
 }
 
-function agregarProducto(prodID, prodNombre, prodPrecio, prodImagen) {
+function agregarProd(prodID, prodNombre, prodPrecio, prodImagen) {
     let contCarrito = document.createElement("div");
-    let contenedorProductos = document.getElementById("contenedor-carrito");
+    let contenedorProductos = document.querySelector(".offcanvas-body");
 
-    let elemProducto = `<div id="${prodID}"> 
+    let elemProducto = `<div class="cart" id="${prodID}"> 
     <p bg-white>${prodNombre}</p>
     <p bg-white>Precio: $${prodPrecio}</p>
     <img src="${prodImagen}">
@@ -72,4 +71,4 @@ function borrarElemento(e) {
 function actualizarCarrito() {
     contadorCarrito.innerText = carritoDeCompras.length
     total.innerText = carritoDeCompras.reduce((acc, el) => acc + el.precio, 0)
-}
+} 
