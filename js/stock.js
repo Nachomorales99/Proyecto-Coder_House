@@ -1,4 +1,4 @@
-let stockRemeras = [
+let stockRemeras= [
     {id: 1, nombre: "Remera Basic", tipo: "remera", desc: "Primer diseño de Black Owl. Basico, simple y con mucha onda", precio: 2500, talle: "L", img: "https://res.cloudinary.com/nacho-morales/image/upload/v1652926497/multimedia/Basic_ilaokz.jpg"}, 
     {id: 2, nombre: "Remera Tiger", tipo: "remera", desc: "Saca tu tigre interior. Black Owl... or Tiger Whatever", precio: 2500, talle: "L", img: "https://res.cloudinary.com/nacho-morales/image/upload/v1652926511/multimedia/Tiger_m0krqg.jpg"},
     {id: 3, nombre: "Remera BIB", tipo: "remera", desc: "El negro no pasa de moda, por eso es que decimos BLACK IS BETTER", precio: 2500, talle: "L", img: "https://res.cloudinary.com/nacho-morales/image/upload/v1652926493/multimedia/BIB_iew2o6.jpg"},
@@ -10,5 +10,5 @@ let stockRemeras = [
     {id: 9, nombre: "Buzo Future", tipo: "buzo", desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.", precio: 4500, talle: "M", img: "https://res.cloudinary.com/nacho-morales/image/upload/v1658446948/multimedia/Buzo_Future_r3bhsn.jpg"},
     {id: 10, nombre: "Jogger Beige", tipo: "jogger", desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.", precio: 4000, talle: "46", img: "https://res.cloudinary.com/nacho-morales/image/upload/v1658446959/multimedia/Jogger_Beige_b9jkyv.jpg"},
     {id: 11, nombre: "Jogger Verde", tipo: "jogger", desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.", precio: 4000, talle: "42", img: "https://res.cloudinary.com/nacho-morales/image/upload/v1658447579/multimedia/jogger_verde_mktgkp.jpg"},
-    {id: 12, nombre: "Jogger Negr", tipo: "jogger", desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.", precio: 4000, talle: "44", img: "https://res.cloudinary.com/nacho-morales/image/upload/v1658446960/multimedia/Jogger_Negro_o6raag.jpg"},
+    {id: 12, nombre: "Jogger Negro", tipo: "jogger", desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.", precio: 4000, talle: "44", img: "https://res.cloudinary.com/nacho-morales/image/upload/v1658446960/multimedia/Jogger_Negro_o6raag.jpg"},
 ];

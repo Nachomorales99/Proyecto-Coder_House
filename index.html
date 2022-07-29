@@ -146,26 +146,40 @@
     <!--FIN CARUSEL-->
 
     <!--REMERAS -->
-    <main id="card-ind">
-        <!-- <div class="card" id=${item.id}>
-            <img class="imagen" src="${item.img}" class="image card-img-top" data-aos="fade-up">
-            <h5 class="card-tittle">${item.nombre}</h5>
-            <h6 class="precio card-subtitle mb-2">$${item.precio}</h6>
-            <p class="card-text">${item.desc}</p>
-            <button class="agregar btn btn-outline-secondary btn-sm"><i class="fas fa-shopping-cart mr-2">Agregar al
-                    carrito</i></button>
-        </div> -->
-    </main>
+    <section class="gallery">
+        <div class="container">
+            <div id="card-ind" class="row">
+                <!-- `<div class="col-lg-4 mb-3">
+            <div class="card">
+                <div class="img-container">
+                    <img src=${item.img} alt="Basic" class="image card-img-top" data-aos="fade-up">
+                    <div class="overlay">
+                        <button id="button ${item.id}" class="btn btn-outline-secondary btn-sm"><i
+                                class="fas fa-shopping-cart mr-2">Agregar al carrito</i></button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-tittle">${item.nombre}</h5>
+                    <h6 class="card-subtitle mb-2">$${item.nombre}</h6>
+                    <p class="card-text">${item.desc}</p>
+                </div>
+            </div>
+        </div>` -->
+            </div>
+        </div>
+    </section>
 
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
         <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasRightLabel">Carrito de compras</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        <div class="offcanvas-body">
-            <!-- <p>Remera Tiger</p>
-            <p>Precio: $2500</p>
-            <button class="boton-eliminar"><i class="fas fa-trash-alt"></i></button> -->
+
+        <div id="contenedor-carrito" class="offcanvas-body">
+            <!-- `<p>${item.nombre}</p>
+            <p>Precio: ${item.precio}</p>
+            <p id="quantity${item.id}">Quantity</p>
+            <button class="btn btn-danger btn-sm" id="delete${item.id}">X</button>` -->
         </div>
 
         <div class="offcanvas-footer">
