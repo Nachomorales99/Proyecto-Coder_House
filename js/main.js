@@ -27,9 +27,16 @@ let mostrarRemeras = (stockRemeras) => {
         let botton = document.getElementById(`button${item.id}`)
         botton.addEventListener("click",()=>{
             cart(item.id);
-            alert(`Agregaste ${item.nombre}`)
+            
+            Swal.fire({
+                position: 'top',
+                icon: 'success',
+                title: `Agregaste ${item.nombre}`,
+                showConfirmButton: false,
+                timer: 1500
+            })  
         })
     })
 }
 
-mostrarRemeras(stockRemeras);
+mostrarRemeras(stockRemeras); 

@@ -22,8 +22,15 @@ let cart = (itemId) => {
         let buttonDelete = document.getElementById(`delete${item.id}`);
         buttonDelete.addEventListener("click", (e) => {
             borrarProducto(e);
+            Swal.fire({
+                position: 'top',
+                icon: 'error',
+                title: `Quitaste ${item.nombre}`,
+                showConfirmButton: false,
+                timer: 1500
+            })  
         })
-        actualizarCarrito();
+        actualizarCarrito()
     }
     mostrarEnCarrito();
 }
@@ -33,10 +40,11 @@ let cart = (itemId) => {
 function borrarProducto(e) {
     let btnClicked = e.target;
     btnClicked.parentElement.remove()
-    actualizarCarrito();
+    carritoDeCompras.shift();
+    actualizarCarrito()
 }
 
-//Actualizar elementos al carrito
+//Acualizar Carrito
 
 function actualizarCarrito() {
     let contadorCarrito = document.getElementById('contador-carrito');
@@ -44,4 +52,4 @@ function actualizarCarrito() {
 
     let total = document.getElementById('precioTotal')
     total.innerText = carritoDeCompras.reduce((acc, el) => acc + el.precio, 0)
-} 
+}
