@@ -13,7 +13,7 @@ let cart = (itemId) => {
         let div = document.createElement("div");
         div.classList.add("productoEnCarrito");
         div.innerHTML = `<p>${item.nombre}</p> 
-        <img src="${item.img}"></img>
+        <img src="${item.img}" class = "card"></img>
         <p>Precio: ${item.precio}</p>
         <button class="btn btn-danger btn-sm" id="delete${item.id}">X</button>`
 

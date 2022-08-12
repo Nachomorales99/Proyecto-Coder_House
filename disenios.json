@@ -1,0 +1,64 @@
+[{
+        "nombre": "F*ck",
+        "id": 1,
+        "tipo": "Remera",
+        "lugar": "Frente",
+        "img":"https://res.cloudinary.com/nacho-morales/image/upload/v1660261229/multimedia/WhatsApp_Image_2022-08-11_at_8.31.16_PM_1_n9zo3u.jpg"
+    },
+
+    {
+        "nombre": "F*ck",
+        "id": 2,
+        "tipo": "Remera",
+        "lugar": "Espalda",
+        "img":"https://res.cloudinary.com/nacho-morales/image/upload/v1660261229/multimedia/WhatsApp_Image_2022-08-11_at_8.31.16_PM_2_ksmgrr.jpg"
+    },
+
+    {
+        "nombre": "Graff",
+        "id": 3,
+        "tipo": "Buzo",
+        "lugar": "Frente",
+        "img":"https://res.cloudinary.com/nacho-morales/image/upload/v1660261229/multimedia/WhatsApp_Image_2022-08-11_at_8.31.17_PM_1_h02plg.jpg"
+    },
+
+    {
+        "nombre": "Street",
+        "id": 4,
+        "tipo": "Remera",
+        "lugar": "Frente",
+        "img":"https://res.cloudinary.com/nacho-morales/image/upload/v1660261229/multimedia/WhatsApp_Image_2022-08-11_at_8.31.15_PM_ryh8i1.jpg"
+    },
+
+    {
+        "nombre": "Street",
+        "id": 5,
+        "tipo": "Remera",
+        "lugar": "Espalda",
+        "img":"https://res.cloudinary.com/nacho-morales/image/upload/v1660261228/multimedia/WhatsApp_Image_2022-08-11_at_8.31.16_PM_kjuh7d.jpg"
+    },
+
+    {
+        "nombre": "Graff",
+        "id": 6,
+        "tipo": "Remera",
+        "lugar": "Frente",
+        "img":"https://res.cloudinary.com/nacho-morales/image/upload/v1660261229/multimedia/WhatsApp_Image_2022-08-11_at_8.31.17_PM_i3gwg5.jpg"
+    },
+
+    {
+        "nombre": "Wall",
+        "id": 7,
+        "tipo": "Remera o Buzo",
+        "lugar": "Frente y Espalda",
+        "img":"https://res.cloudinary.com/nacho-morales/image/upload/v1660261227/multimedia/Buzo_Graff_wncejj.png"
+    },
+
+    {
+        "nombre": "Owl",
+        "id": 8,
+        "tipo": "Buzo",
+        "lugar": "Espalda",
+        "img":"https://res.cloudinary.com/nacho-morales/image/upload/v1660261228/multimedia/WhatsApp_Image_2022-08-11_at_8.31.18_PM_chnpvb.jpg"
+    }
+]
