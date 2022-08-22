@@ -1,7 +1,7 @@
 //DOM 
 
 const boton = document.getElementById("botoncito");
-const disenios = document.getElementById("fetch");
+const disenios = document.getElementById("fetch card-ind");
 
 //EVENTO
 
