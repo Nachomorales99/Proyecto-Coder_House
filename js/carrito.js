@@ -5,7 +5,7 @@ let carritoDeCompras = []
 let cart = (itemId) => {
     let contenedorCarrito = document.getElementById('contenedor-carrito');
     let mostrarEnCarrito = () => {
-        let item = stockRemeras.find(item => item.id == itemId)
+        let item = resultado.find(item => item.id == itemId)
 
         carritoDeCompras.push(item);
         localStorage.setItem("stockRemeras", JSON.stringify(carritoDeCompras));

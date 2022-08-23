@@ -1,17 +1,24 @@
-//MOSTRAR PRODUCTOS
+// MOSTRAR PRODUCTOS
 
 const stock = document.getElementById("card-ind");
 
+let ropita = [];
+
 const mostrar = () => {
-    fetch('../stock.json')
+    fetch('./stock.json')
         .then(respuesta => respuesta.json())
         .then(resultado => {
         
+            let muestraRemera = resultado.find(product => product.tipo == "remera");
+            ropita.push(muestraRemera); 
 
-            let buscarBuzos = resultado.filter(product => product.tipo == "buzo");
-            console.log(buscarBuzos);
+            let muestraBuzo = resultado.find(product => product.tipo == "buzo");
+            ropita.push(muestraBuzo);
 
-            buscarBuzos.forEach(item => {
+            let muestraJogger = resultado.find(product => product.tipo == "jogger");
+            ropita.push(muestraJogger);
+
+            ropita.forEach(item => {
                 let div = document.createElement('div')
                 div.className = 'col-lg-4 mb-3'
                 div.innerHTML += `<div class="card">
@@ -49,4 +56,4 @@ const mostrar = () => {
         })
 }
 
-mostrar();
+mostrar(); 

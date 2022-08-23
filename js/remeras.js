@@ -8,10 +8,9 @@ const mostrar = () => {
         .then(resultado => {
         
 
-            let buscarBuzos = resultado.filter(product => product.tipo == "buzo");
-            console.log(buscarBuzos);
+            let buscarRemeras = resultado.filter(product => product.tipo == "remera");
 
-            buscarBuzos.forEach(item => {
+            buscarRemeras.forEach(item => {
                 let div = document.createElement('div')
                 div.className = 'col-lg-4 mb-3'
                 div.innerHTML += `<div class="card">
