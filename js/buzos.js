@@ -61,7 +61,16 @@ let cart = (itemId) => {
     let mostrarEnCarrito = () => {
         let item = buscarBuzos.find(item => item.id == itemId)
 
-        carritoDeCompras.push(item); 
+        let existe = carritoDeCompras.find(existe => item.id == itemId)
+
+        if (existe == item) {
+            
+            /*let productosIva = listaProductos.map(prod => prod.precio == prod.precio * 1.21);
+
+            console.log(productosIva);*/
+        }
+
+        carritoDeCompras.push(item);
         localStorage.setItem("stockInd", JSON.stringify(carritoDeCompras));
 
         let div = document.createElement("div");
