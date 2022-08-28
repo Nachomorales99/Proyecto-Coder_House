@@ -44,62 +44,6 @@
                         alt="logo"></a>
             </div>
 
-            <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
-                aria-controls="offcanvasRight"><i class="fas fa-shopping-cart"></i>
-                <span id="contador-carrito">0</span>
-            </button>
-
-            <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-
-                <ul class="navbar-nav text-center">
-
-                    <li class="nav-item">
-                        <a class="trans nav-link" href="../index.html">Home</a>
-                    </li> 
-
-                    <li class="nav-item dropdown">
-                        <a class="trans nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Indumentaria
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="./remeras.html">Remeras</a></li>
-                            <li><a class="dropdown-item" href="./buzos.html">Buzos</a></li>
-                            <li><a class="dropdown-item" href="./joggers.html">Joggers</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="indumentaria.html">Ver Todo</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="trans nav-link" href="sale.html">Sale</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="trans nav-link" href="talles.html">Talles</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="trans nav-link" href="mayorista.html">Mayorista</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="trans nav-link" href="nosotros.html">Nosotros</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="trans nav-link" href="equipo.html">Equipo</a>
-                    </li>
-                </ul>
-            </div>
         </div>
     </nav>
     <!-- FIN NAVBAR -->
@@ -107,40 +51,19 @@
     <!-- ENCABEZADO  -->
 
     <section class="portada jumbotron text-center">
-        <h2 class="titulo1">Buzos</h2>
+        <h2 class="titulo1">Carrito</h2>
     </section>
 
     <!-- FIN ENCABEZADO -->
 
-    <!--BUZOS -->
-    <section class="gallery">
-        <div class="container">
-            <div id="card-ind" class="row">
-                
-            </div>
-        </div>
-    </section>
+    <!--PRODUCTOS --> 
 
-    <div class="carrito offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasRightLabel">Carrito de compras</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
+    <div id="compra">
 
-        <div id="contenedor-carrito" class="offcanvas-body">
-            <!-- `<p>${item.nombre}</p>
-            <p>Precio: ${item.precio}</p>
-            <p id="quantity${item.id}">Quantity</p>
-            <button class="btn btn-danger btn-sm" id="delete${item.id}">X</button>` -->
-        </div>
 
-        <div class="offcanvas-footer">
-            <p class="precioProducto">TOTAL: $<span id="precioTotal">0</span></p>
-            <div><a href="./compras.html"><button type="button" class="iniciar tn btn-dark" data-bs-dismiss="offcanvas" aria-label="Close">Iniciar Compra</button></a></div>
-            <div><button type="button" class="seguir btn btn-dark" data-bs-dismiss="offcanvas" aria-label="Close">Seguir comprando</button></div>
-        </div> 
     </div>
-    <!--FIN BUZOS -->
+    
+    <!--FIN PRODUCTOS -->
 
     <!-- FOOTER -->
 
@@ -218,7 +141,7 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- Sweet Alert JS -->
-    <script src="../js/buzos.js"></script>
+    <script src="../js/compra.js"></script>
 </body>
 
 </html>

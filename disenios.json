@@ -60,5 +60,13 @@
         "tipo": "Buzo",
         "lugar": "Espalda",
         "img":"https://res.cloudinary.com/nacho-morales/image/upload/v1660261228/multimedia/WhatsApp_Image_2022-08-11_at_8.31.18_PM_chnpvb.jpg"
+    },
+
+    {
+        "nombre": "Proximamente",
+        "id": 9,
+        "tipo": "Mas",
+        "lugar": "",
+        "img":"https://res.cloudinary.com/nacho-morales/image/upload/v1661711956/multimedia/coming-soon-940x529_tbtxze.jpg"
     }
 ]

@@ -37,13 +37,6 @@ const mostrar = () => {
 
                     cart(item.id);
 
-                    Swal.fire({
-                        position: 'top',
-                        icon: 'success',
-                        title: `Agregaste ${item.nombre}`,
-                        showConfirmButton: false,
-                        timer: 1500
-                    })
                 })
             })
         })
@@ -59,26 +52,26 @@ let cart = (itemId) => {
     let contenedorCarrito = document.getElementById('contenedor-carrito');
 
     let mostrarEnCarrito = () => {
+
         let item = buscarBuzos.find(item => item.id == itemId)
 
-        let existe = carritoDeCompras.find(existe => item.id == itemId)
-
-        if (existe == item) {
-            
-            /*let productosIva = listaProductos.map(prod => prod.precio == prod.precio * 1.21);
-
-            console.log(productosIva);*/
-        }
+        Swal.fire({
+            position: 'top',
+            icon: 'success',
+            title: `Agregaste ${item.nombre}`,
+            showConfirmButton: false,
+            timer: 1500
+        })
 
         carritoDeCompras.push(item);
         localStorage.setItem("stockInd", JSON.stringify(carritoDeCompras));
 
         let div = document.createElement("div");
         div.classList.add("productoEnCarrito");
-        div.innerHTML = `<p>${item.nombre}</p> 
-        <img src="${item.img}" class = "card"></img>
-        <p>Precio: ${item.precio}</p>
-        <button class="btn btn-danger btn-sm" id="delete${item.id}">X</button>`
+        div.innerHTML = `<p class = "titulo">${item.nombre}</p> 
+        <img src="${item.img}" class = "imgPro card"></img>
+        <p class = "precio">Subtotal: $${item.precio}</p>
+        <button class="quitar btn btn-danger btn-sm" id="delete${item.id}">Quitar</button>`
 
         contenedorCarrito.appendChild(div);
 
@@ -116,3 +109,5 @@ function actualizarCarrito() {
     let total = document.getElementById('precioTotal')
     total.innerText = carritoDeCompras.reduce((acc, el) => acc + el.precio, 0)
 }
+
+//IR A LA COMPRA 

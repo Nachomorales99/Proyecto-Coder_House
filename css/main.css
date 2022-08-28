@@ -351,9 +351,68 @@ footer {
       font-size: 1.5rem;
       color: white; }
 
-.carrito .head {
-  display: flex; }
-  .carrito .head .titulo {
+.carrito .offcanvas-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold; }
+
+.carrito .precioProducto {
+  font-size: 30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 700; }
+
+.productoEnCarrito {
+  display: grid;
+  flex-direction: row; }
+  .productoEnCarrito .titulo {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 500;
+    font-family: 'Times New Roman', Times, serif; }
+  .productoEnCarrito .imgPro {
+    margin: 0;
+    width: 100px;
+    height: 150px;
     display: flex;
     justify-content: center;
     align-items: center; }
+  .productoEnCarrito .precio {
+    display: flex;
+    justify-content: left;
+    font-size: 18px;
+    font-weight: 300;
+    font-family: Georgia, 'Times New Roman', Times, serif; }
+  .productoEnCarrito .quitar {
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif; }
+
+.offcanvas-footer .iniciar {
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 1rem;
+  border: none;
+  background-color: black;
+  text-decoration: none; }
+
+.offcanvas-footer .seguir {
+  color: black;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 1rem;
+  border: none;
+  background-color: white;
+  text-decoration: underline; }
