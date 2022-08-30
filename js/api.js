@@ -9,7 +9,15 @@ let cont = 0;
 
 boton.onclick = () => {
     cont = cont + 1;
-    generarDisenio();
+
+    cont < 10 ? generarDisenio() : Swal.fire({
+        position: 'top',
+        icon: 'info',
+        title: `Mas diseños Proximamente`,
+        showConfirmButton: false,
+        timer: 1500
+    })
+    
 }
 
 //FETCH 
@@ -22,7 +30,7 @@ const generarDisenio = () => {
             let productos = resultado;
 
             let mostrar = productos.find(product => product.id == cont);
-            nuevos.push(mostrar);
+            nuevos.push(mostrar); 
 
             nuevos.forEach(product => {
                 disenios.innerHTML += `<div "id" = ${product.id} class = 'col-lg-4 mb-3'>
@@ -38,5 +46,6 @@ const generarDisenio = () => {
                 </div>`
             })
             nuevos.pop();
+            
         })
 }

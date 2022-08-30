@@ -149,27 +149,12 @@
     <section class="gallery">
         <div class="container">
             <div id="card-ind" class="row">
-                <!-- `<div class="col-lg-4 mb-3">
-            <div class="card">
-                <div class="img-container">
-                    <img src=${item.img} alt="Basic" class="image card-img-top" data-aos="fade-up">
-                    <div class="overlay">
-                        <button id="button ${item.id}" class="btn btn-outline-secondary btn-sm"><i
-                                class="fas fa-shopping-cart mr-2">Agregar al carrito</i></button>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <h5 class="card-tittle">${item.nombre}</h5>
-                    <h6 class="card-subtitle mb-2">$${item.nombre}</h6>
-                    <p class="card-text">${item.desc}</p>
-                </div>
-            </div>
-        </div>` -->
+                
             </div>
         </div>
     </section>
 
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="carrito offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
         <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasRightLabel">Carrito de compras</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -183,16 +168,16 @@
         </div>
 
         <div class="offcanvas-footer">
-            <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
-            <button type="button" class="btn btn-dark" data-bs-dismiss="offcanvas" aria-label="Close">Comprar</button>
-            <button type="button" class="btn btn-dark" data-bs-dismiss="offcanvas" aria-label="Close">Cerrar</button>
-        </div>
+            <p class="precioProducto">TOTAL: $<span id="precioTotal">0</span></p>
+            <div><button type="button" id="iniciarCompra" class= "iniciar btn btn-dark" data-bs-dismiss="offcanvas" aria-label="Close">Iniciar Compra</button></div>
+            <div><button type="button" class="seguir btn btn-dark" data-bs-dismiss="offcanvas" aria-label="Close">Seguir comprando</button></div>
+        </div> 
     </div>
 
     <!--FIN REMERAS -->
 
     <!--DISEÑOS NUEVOS -->
-    <button id="botoncito" style="margin: 20px"> Nuevos Diseños</button>
+    <div class="contBontoncito"><button id="botoncito"> Nuevos Diseños</button></div>
 
     <section class="gallery">
         <div class="container">
@@ -278,7 +263,6 @@
 
     <!-- LINK JS -->
     <script src="./js/home.js"></script>
-    <script src="./js/carrito.js"></script>
     <script src="./js/api.js"></script>
 
     <!-- LINK JAVASCRIPT + POPPER -->

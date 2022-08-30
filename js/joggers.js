@@ -36,14 +36,6 @@ const mostrar = () => {
                 botton.addEventListener("click", () => {
 
                     cart(item.id);
-
-                    Swal.fire({
-                        position: 'top',
-                        icon: 'success',
-                        title: `Agregaste ${item.nombre}`,
-                        showConfirmButton: false,
-                        timer: 1500
-                    })
                 })
             })
         })
@@ -61,21 +53,44 @@ let cart = (itemId) => {
     let mostrarEnCarrito = () => {
         let item = buscarJogger.find(item => item.id == itemId)
 
-        carritoDeCompras.push(item); 
-        localStorage.setItem("stockInd", JSON.stringify(carritoDeCompras));
+        let existe = carritoDeCompras.some(item => item.id == itemId); 
 
-        let div = document.createElement("div");
-        div.classList.add("productoEnCarrito");
-        div.innerHTML = `<p>${item.nombre}</p> 
-        <img src="${item.img}" class = "card"></img>
-        <p>Precio: ${item.precio}</p>
-        <button class="btn btn-danger btn-sm" id="delete${item.id}">X</button>`
+        if (existe == true) {
+            Swal.fire({
+                position: 'top',
+                icon: 'warning',
+                title: `${item.nombre} ya fue agregado`,
+                showConfirmButton: false,
+                timer: 1500
+            })
+        } else {
 
-        contenedorCarrito.appendChild(div);
+            Swal.fire({
+                position: 'top',
+                icon: 'success',
+                title: `Agregaste ${item.nombre}`,
+                showConfirmButton: false,
+                timer: 1500
+            })
+
+            carritoDeCompras.push(item);
+            localStorage.setItem("stockInd", JSON.stringify(carritoDeCompras));
+
+            let div = document.createElement("div");
+            div.classList.add("productoEnCarrito");
+            div.innerHTML = `<p class = "titulo">${item.nombre}</p> 
+        <img src="${item.img}" class = "imgPro card"></img>
+        <p class = "precio">Subtotal: $${item.precio}</p>
+        <button class="quitar btn btn-danger btn-sm" id="delete${item.id}">Quitar</button>`
+
+            contenedorCarrito.appendChild(div);
+        }
 
         let buttonDelete = document.getElementById(`delete${item.id}`);
+
         buttonDelete.addEventListener("click", (e) => {
-            borrarProducto(e);
+            borrarProducto(e, item);
+
             Swal.fire({
                 position: 'top',
                 icon: 'error',
@@ -91,10 +106,15 @@ let cart = (itemId) => {
 
 //Quitar elementos al carrito
 
-function borrarProducto(e) {
+function borrarProducto(e, item) {
+
     let btnClicked = e.target;
     btnClicked.parentElement.remove()
-    carritoDeCompras.shift();
+
+    let index = carritoDeCompras.indexOf(item);
+    console.log(index);
+
+    carritoDeCompras.splice(index, 1);
     actualizarCarrito()
 }
 

@@ -8,9 +8,9 @@ const mostrar = () => {
     fetch('./stock.json')
         .then(respuesta => respuesta.json())
         .then(resultado => {
-        
+
             let muestraRemera = resultado.find(product => product.tipo == "remera");
-            ropita.push(muestraRemera); 
+            ropita.push(muestraRemera);
 
             let muestraBuzo = resultado.find(product => product.tipo == "buzo");
             ropita.push(muestraBuzo);
@@ -36,27 +36,19 @@ const mostrar = () => {
             </div>
         </div>`
 
-            stock.appendChild(div) 
+                stock.appendChild(div)
 
-            const botton = document.getElementById(`button${item.id}`) 
+                const botton = document.getElementById(`button${item.id}`)
 
-            botton.addEventListener("click", () => {
-                cart(item.id);
-    
-                Swal.fire({
-                    position: 'top',
-                    icon: 'success',
-                    title: `Agregaste ${item.nombre}`,
-                    showConfirmButton: false,
-                    timer: 1500
+                botton.addEventListener("click", () => {
+                    cart(item.id);
                 })
-            })
-            
+
             })
         })
 }
 
-mostrar();  
+mostrar();
 
 //Agregar elementos al carrito 
 
@@ -68,21 +60,43 @@ let cart = (itemId) => {
     let mostrarEnCarrito = () => {
         let item = ropita.find(item => item.id == itemId)
 
-        carritoDeCompras.push(item); 
-        localStorage.setItem("stockInd", JSON.stringify(carritoDeCompras));
+        let existe = carritoDeCompras.some(item => item.id == itemId);
 
-        let div = document.createElement("div");
-        div.classList.add("productoEnCarrito");
-        div.innerHTML = `<p>${item.nombre}</p> 
-        <img src="${item.img}" class = "card"></img>
-        <p>Precio: ${item.precio}</p>
-        <button class="btn btn-danger btn-sm" id="delete${item.id}">X</button>`
+        if (existe == true) {
+            Swal.fire({
+                position: 'top',
+                icon: 'warning',
+                title: `${item.nombre} ya fue agregado`,
+                showConfirmButton: false,
+                timer: 1500
+            })
+        } else {
 
-        contenedorCarrito.appendChild(div);
+            Swal.fire({
+                position: 'top',
+                icon: 'success',
+                title: `Agregaste ${item.nombre}`,
+                showConfirmButton: false,
+                timer: 1500
+            })
 
+            carritoDeCompras.push(item);
+            localStorage.setItem("stockInd", JSON.stringify(carritoDeCompras));
+
+            let div = document.createElement("div");
+            div.classList.add("productoEnCarrito");
+            div.innerHTML = `<p class = "titulo">${item.nombre}</p> 
+        <img src="${item.img}" class = "imgPro card"></img>
+        <p class = "precio">Subtotal: $${item.precio}</p>
+        <button class="quitar btn btn-danger btn-sm" id="delete${item.id}">Quitar</button>`
+
+            contenedorCarrito.appendChild(div);
+        }
         let buttonDelete = document.getElementById(`delete${item.id}`);
+
         buttonDelete.addEventListener("click", (e) => {
-            borrarProducto(e);
+            borrarProducto(e, item);
+
             Swal.fire({
                 position: 'top',
                 icon: 'error',
@@ -98,10 +112,15 @@ let cart = (itemId) => {
 
 //Quitar elementos al carrito
 
-function borrarProducto(e) {
+function borrarProducto(e, item) {
+
     let btnClicked = e.target;
     btnClicked.parentElement.remove()
-    carritoDeCompras.shift();
+
+    let index = carritoDeCompras.indexOf(item);
+    console.log(index);
+
+    carritoDeCompras.splice(index, 1);
     actualizarCarrito()
 }
 

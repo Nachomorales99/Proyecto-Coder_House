@@ -55,29 +55,44 @@ let cart = (itemId) => {
 
         let item = buscarBuzos.find(item => item.id == itemId)
 
-        Swal.fire({
-            position: 'top',
-            icon: 'success',
-            title: `Agregaste ${item.nombre}`,
-            showConfirmButton: false,
-            timer: 1500
-        })
+        let existe = carritoDeCompras.some(item => item.id == itemId);
 
-        carritoDeCompras.push(item);
-        localStorage.setItem("stockInd", JSON.stringify(carritoDeCompras));
+        if (existe == true) {
+            Swal.fire({
+                position: 'top',
+                icon: 'warning',
+                title: `${item.nombre} ya fue agregado`,
+                showConfirmButton: false,
+                timer: 1500
+            })
+        } else {
 
-        let div = document.createElement("div");
-        div.classList.add("productoEnCarrito");
-        div.innerHTML = `<p class = "titulo">${item.nombre}</p> 
+            Swal.fire({
+                position: 'top',
+                icon: 'success',
+                title: `Agregaste ${item.nombre}`,
+                showConfirmButton: false,
+                timer: 1500
+            })
+
+            carritoDeCompras.push(item);
+            localStorage.setItem("stockInd", JSON.stringify(carritoDeCompras));
+
+            let div = document.createElement("div");
+            div.classList.add("productoEnCarrito");
+            div.innerHTML = `<p class = "titulo">${item.nombre}</p> 
         <img src="${item.img}" class = "imgPro card"></img>
         <p class = "precio">Subtotal: $${item.precio}</p>
         <button class="quitar btn btn-danger btn-sm" id="delete${item.id}">Quitar</button>`
 
-        contenedorCarrito.appendChild(div);
+            contenedorCarrito.appendChild(div);
+        }
 
         let buttonDelete = document.getElementById(`delete${item.id}`);
+
         buttonDelete.addEventListener("click", (e) => {
-            borrarProducto(e);
+            borrarProducto(e, item);
+
             Swal.fire({
                 position: 'top',
                 icon: 'error',
@@ -93,10 +108,15 @@ let cart = (itemId) => {
 
 //Quitar elementos al carrito
 
-function borrarProducto(e) {
+function borrarProducto(e, item) {
+
     let btnClicked = e.target;
     btnClicked.parentElement.remove()
-    carritoDeCompras.shift();
+
+    let index = carritoDeCompras.indexOf(item);
+    console.log(index);
+
+    carritoDeCompras.splice(index, 1);
     actualizarCarrito()
 }
 
@@ -108,6 +128,17 @@ function actualizarCarrito() {
 
     let total = document.getElementById('precioTotal')
     total.innerText = carritoDeCompras.reduce((acc, el) => acc + el.precio, 0)
-}
+} 
 
-//IR A LA COMPRA 
+const iniciarCompra = document.getElementById("iniciarCompra")
+
+iniciarCompra.addEventListener("click", (e) => {
+
+    Swal.fire({
+        position: 'top',
+        icon: 'success',
+        title: `Gracias por su compra`,
+        showConfirmButton: false,
+        timer: 1500
+    })  
+})

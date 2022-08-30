@@ -40,6 +40,30 @@ body {
             }
         }
     }
+
+    .contBontoncito {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        #botoncito {
+            margin: 1rem;
+            margin-bottom: 1.5rem;
+            color: white;
+            border-color: #302a58;
+            border-radius: 5%;
+            background: rgb(48, 42, 88);
+            background: linear-gradient(90deg, rgba(48, 42, 88, 1) 36%, rgba(0, 5, 1, 1) 48%, rgba(53, 53, 85, 1) 59%);
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 30px;
+
+            &:hover {
+                transition: 0.75s;
+                font-size: 35px;
+            }
+        }
+    }
+
 }
 
 //Mixin

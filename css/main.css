@@ -37,6 +37,23 @@ body {
     @media (min-width: 1200px) {
       body .carru img {
         height: 400px; } }
+  body .contBontoncito {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    body .contBontoncito #botoncito {
+      margin: 1rem;
+      margin-bottom: 1.5rem;
+      color: white;
+      border-color: #302a58;
+      border-radius: 5%;
+      background: #302a58;
+      background: linear-gradient(90deg, #302a58 36%, #000501 48%, #353555 59%);
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 30px; }
+      body .contBontoncito #botoncito:hover {
+        transition: 0.75s;
+        font-size: 35px; }
 
 nav {
   background-color: #000000;
@@ -398,8 +415,8 @@ footer {
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 10px;
-  margin-bottom: 1rem;
+  padding: 5px;
+  margin-bottom: 0.5rem;
   border: none;
   background-color: black;
   text-decoration: none; }
